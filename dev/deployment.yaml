@@ -12,7 +12,9 @@ spec:
       labels:
         app: myapp
     spec:
-      containers:
+      imagePullSecrets:
+      - name: regcred
+      containers:      
       - name: myapp
         image: ramakrishna8254/week:v1
         ports:
